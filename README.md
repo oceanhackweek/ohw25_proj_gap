@@ -9,7 +9,7 @@ graph LR
   A[netcdf/Zarr w time, lat, lon] --> G{to xarray}
   G --> C[standardized Zarr w masks and season]
   C --> D{CNN or UNet model}
-  D --> E([Fill in the gaps])
+  D --> E[Predict: xarray with gaps filled]
 ```
 
 Functions are in `mindthegap` directory.
