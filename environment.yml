@@ -1,4 +1,3 @@
-name: dincae
 channels:
   - conda-forge
   - defaults
