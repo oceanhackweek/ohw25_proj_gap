@@ -6,11 +6,10 @@ Create a tutorial on gap-free Indian Ocean gridded data with U-Net method
 The basic approach is the following:
 ```mermaid
 graph LR
-  A[Observation data - dataframe w time, lat, lon] --> G{matchup obs to xarray}
-  B[Predictor data - xarray] --> G
-  G --> C[dataframe w obs data, abund or 0/1, and predictor variables]
-  C --> D{CNN}
-  D --> E([Predict])
+  A[netcdf/Zarr w time, lat, lon] --> G{to xarray}
+  G --> C[standardized Zarr w masks and season]
+  C --> D{CNN or UNet model}
+  D --> E([Fill in the gaps])
 ```
 
 Functions are in `mindthegap` directory.
