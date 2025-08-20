@@ -2,6 +2,21 @@
 
 Template for starting Oceanhackweek project repos. 
 
+The basic approach is the following:
+```mermaid
+graph LR
+  A[Observation data - dataframe w time, lat, lon] --> G{matchup obs to xarray}
+  B[Predictor data - xarray] --> G
+  G --> C[dataframe w obs data, abund or 0/1, and predictor variables]
+  C --> D{CNN}
+  D --> E([Predict])
+```
+
+Functions are in `mindthegap` directory.
+```
+import mindthegap as mtg
+```
+
 This repo is an example of how teams can structure their project repositories and format their project README.md file, but feel free to adapt as suits your needs.
 
 **Folder Structure**
