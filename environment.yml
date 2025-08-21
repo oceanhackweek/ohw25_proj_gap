@@ -1,0 +1,26 @@
+name: eo-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6.8
+  - numpy=1.15.4
+  - netcdf4=1.4.2
+  - pandas
+  - xarray
+  - dask
+  - distributed
+  - geopandas
+  - shapely
+  - pyproj
+  - fiona
+  - gdal
+  - matplotlib
+  - cartopy
+  - pillow
+  - tqdm
+  - ipykernel
+  - jupyterlab
+  - pip
+  - pip:
+      - tensorflow==1.15.0

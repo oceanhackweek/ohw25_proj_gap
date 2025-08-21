@@ -1,15 +1,15 @@
-# ohwyy_proj_template
+# Mind the CHL Gap
 
-Template for starting Oceanhackweek project repos. 
+Create a tutorial on gap-free Indian Ocean gridded data with U-Net method
+
 
 The basic approach is the following:
 ```mermaid
 graph LR
-  A[Observation data - dataframe w time, lat, lon] --> G{matchup obs to xarray}
-  B[Predictor data - xarray] --> G
-  G --> C[dataframe w obs data, abund or 0/1, and predictor variables]
-  C --> D{CNN}
-  D --> E([Predict])
+  A[netcdf/Zarr w time, lat, lon] --> G{to xarray}
+  G --> C[standardized Zarr w masks and season]
+  C --> D{CNN or UNet model}
+  D --> E[Predict: xarray with gaps filled]
 ```
 
 Functions are in `mindthegap` directory.
@@ -17,42 +17,22 @@ Functions are in `mindthegap` directory.
 import mindthegap as mtg
 ```
 
-This repo is an example of how teams can structure their project repositories and format their project README.md file, but feel free to adapt as suits your needs.
-
-**Folder Structure**
-
-* `contributor_folders` (optional) Each contributor can make a folder here and 
-push their work here during the week. This will allow everyone to see each others work but prevent any merge conflicts. It is good if participants are new to collaborative coding.
-* `final_notebooks` When the team develops shared final notebooks, they 
-can be shared here. Make sure to communicate so that you limit merge conflicts.
-* `scripts` Shared scripts or functions can be added here.
-* `data` Shared dataset can be shared here. Note, do not put large datasets on GitHub. Speak to the organizers if you 
-need to share large datasets. Each team member can have a version of the dataset locally in the same folder to 
-preserve relative paths, but the dataset does not need to be added to git/GitHub (you can use `.gitignore`).
-
-You can start with a simple structure and as you progress you can refine it to contain more components. [Here](https://cookiecutter-data-science.drivendata.org/#directory-structure) is an example of a more elaborate structure for a data science project.
-
-## Project Name
-
-## One-line Description
-
-## Planning
-
 ## Collaborators
 
 | Name                | Role                |
 |---------------------|---------------------|
-| Participant 1       | Project Facilitator |
-| Participant 2       | Participant         |
-| Participant 3       | Participant         |
+| Eli       | Project Facilitator |
+| Bruna       | Fellow         |
+| Trina       | Participant         |
+| Lilac | Participant |
+
 
 ## Planning
 
-* Initial idea: "short description"
-* Ideation jam board: Add link
-* Ideation Presentation: Add link
-* Slack channel: ohw25_proj_name
-* Project google drive: Add link
+* Initial idea: Create a tutorial on gap-free Indian Ocean gridded data with U-Net method
+* [Pitch slide](https://docs.google.com/presentation/d/14JyNPC2JicP1IkHbWcDI0xt0FRbDmtdW4NTQo8wN80M/edit?slide=id.g37b3811c38a_11_5#slide=id.g37b3811c38a_11_5)
+* Slack channel: ohw25_proj_gap
+* repo: [https://github.com/oceanhackweek/ohw25_proj_gap](https://github.com/oceanhackweek/ohw25_proj_gap)
 * Final presentation: Add link
 
 ## Background
@@ -60,6 +40,17 @@ You can start with a simple structure and as you progress you can refine it to c
 ## Goals
 
 ## Datasets
+
+```
+import xarray as xr
+dataset = xr.open_dataset(
+    "gcs://nmfs_odp_nwfsc/CB/mind_the_chl_gap/IO.zarr",
+    engine="zarr",
+    backend_kwargs={"storage_options": {"token": "anon"}},
+    consolidated=True
+)
+dataset
+```
 
 ## Workflow/Roadmap
 
