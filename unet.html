@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'unet';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -180,11 +182,14 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">What is U-Net?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0-U-Net_Modules.html">Modules used</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1-U-Net_Data_Prep.html">Prep the data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2-U-Net_Fit.html">Training the U-Net Models for gap filling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-U-Net_Viz.html">Vizualizing the predictions</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">What is U-Net?</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="0-U-Net_Modules.html">Modules used</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1-U-Net_Data_Prep.html">Prep the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-U-Net_Fit.html">Training the U-Net Models for gap filling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-U-Net_Viz.html">Vizualizing the predictions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="dincae.html">What is DINCAE?</a></li>
 </ul>
 
     </div>
@@ -415,6 +420,8 @@ U-Net follows an autoencoder architecture, where the encoder half down-samples i
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <span class="target" id="id1"></span></section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
