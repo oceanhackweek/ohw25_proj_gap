@@ -21,10 +21,11 @@ import mindthegap as mtg
 
 | Name                | Role                |
 |---------------------|---------------------|
-| Eli       | Project Facilitator |
-| Bruna       | Fellow         |
-| Trina       | Participant         |
-| Lilac | Participant |
+| [Eli Holmes](https://github.com/eeholmes)      | Project Facilitator |
+| [Bruna Cândido](https://github.com/brunacandido)       | Fellow         |
+| [Trina Xavier](https://github.com/trinaxavier2001)       | Participant         |
+| [Lilac Hong](https://github.com/LilacHo) | Participant |
+
 
 
 ## Planning
@@ -33,11 +34,15 @@ import mindthegap as mtg
 * [Pitch slide](https://docs.google.com/presentation/d/14JyNPC2JicP1IkHbWcDI0xt0FRbDmtdW4NTQo8wN80M/edit?slide=id.g37b3811c38a_11_5#slide=id.g37b3811c38a_11_5)
 * Slack channel: ohw25_proj_gap
 * repo: [https://github.com/oceanhackweek/ohw25_proj_gap](https://github.com/oceanhackweek/ohw25_proj_gap)
-* Final presentation: Add link
+* [Final presentation](https://gamma.app/docs/Daily-Gap-Filled-Chlorophyll-a-Datasets-Using-Deep-Neural-Network-ozsc5xmxri96od1?mode=doc)
 
 ## Background
+Chlorophyll is a widely used indicator of plankton abundance, and thus a key measure of marine productivity and ecosystem health, since the ocean covers nearly 70% of Earth’s surface. Estimating chlorophyll concentrations allows researchers to assess phytoplankton biomass, which supports oceanic food webs and contributes to global carbon cycling. Remote sensing with ocean-color instruments enables large-scale monitoring of chlorophyll-a by detecting the light reflectance of plankton. However, cloud cover continues to be a significant challenge, obstructing surface observations and creating gaps in chlorophyll-a data. These gaps limit our ability to monitor marine productivity accurately and to quantify the contribution of plankton to the global carbon cycle.
 
 ## Goals
+Contribute to ["mind-the-chl-gap" project](https://github.com/ocean-satellite-tools/mind-the-chl-gap/tree/main) and the create a tutorial on gap-free Indian Ocean gridded data with U-Net method.
+For OceanHackWeek 2025, we aimed to extend the existing work by exploring different types of CNN architectures and experimenting with alternative gap-filling tools, such as [segmentation_models_pytorch](https://github.com/qubvel-org/segmentation_models.pytorch), [DINCAE](https://github.com/gher-uliege/DINCAE.jl/tree/main).
+
 
 ## Datasets
 
