@@ -6,8 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; UNet gap-filling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Modules used &#8212; UNet gap-filling</title>
   
   
   
@@ -56,9 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Index" href="#" />
+    <script>DOCUMENTATION_OPTIONS.pagename = '0-U-Net_Modules';</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Prep the data" href="1-U-Net_Data_Prep.html" />
+    <link rel="prev" title="What is U-Net?" href="unet.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,9 +179,9 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="unet.html">What is U-Net?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0-U-Net_Modules.html">Modules used</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modules used</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1-U-Net_Data_Prep.html">Prep the data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2-U-Net_Fit.html">Training the U-Net Models for gap filling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3-U-Net_Viz.html">Vizualizing the predictions</a></li>
@@ -255,7 +256,7 @@
       
       
       
-      <li><a href="https://github.com/oceanhackweek/ohw25_proj_gap/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/oceanhackweek/ohw25_proj_gap/issues/new?title=Issue%20on%20page%20%2F0-U-Net_Modules.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -267,6 +268,54 @@
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/0-U-Net_Modules.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -308,7 +357,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -319,11 +370,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Modules used</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#library-imports">Library imports</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -333,13 +392,48 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
+  <section class="tex2jax_ignore mathjax_ignore" id="modules-used">
+<h1>Modules used<a class="headerlink" href="#modules-used" title="Link to this heading">#</a></h1>
+<p>These are the Python modules used in the U-Net tutuorial.</p>
+<section id="library-imports">
+<h2>Library imports<a class="headerlink" href="#library-imports" title="Link to this heading">#</a></h2>
+<p>We will be using the following libraries:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code>: NumPy is a fundamental library for scientific computing in Python. It provides support for multidimensional arrays, matrices, and many fast mathematical operations tomanipulate these data structures. We use NumPy for array operations and data processing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">dask.array</span> <span class="pre">as</span> <span class="pre">da</span></code>: Dask is a parallel computing library that handles large datasets, and dask array allows parallel computation coordinating a collection of NumPy arrays, which greatly improves efficiency. We use Dask array for more efficient computation of larger data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">xarray</span> <span class="pre">as</span> <span class="pre">xr</span></code>: Xarray is designed for working with labeled multi-dimensional arrays, commonly used in scientific data analysis, particularly in fields like oceanography and climate science. It extends the capabilities of NumPy arrays by introducing labels of dimensions, coordinates, and attributes to the data. We use Xarray to create and manipulate datasets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">zarr</span></code>: Zarr is a cloud-based data format for chunked, compressed, N-dimensional arrays. The library allows efficient storage and access of large datasets. We use Zarr to store Xarray datasets in the easily accessible Zarr format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">os</span> <span class="pre">import</span> <span class="pre">path</span></code>: The OS library provides functions for interacting with the operating system, and the Path submodule is specifically useful in pathname manipulations. We use path to check whether a file or directory exists and avoid recomputations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">matplotlib.pyplot</span> <span class="pre">as</span> <span class="pre">plt</span></code>: Matplotlib is a powerful plotting library, and the pyplot module introduces a collection of functions that allows MATLAB-like plotting. We use pyplot to visualize our data and results.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">tensorflow</span> <span class="pre">as</span> <span class="pre">tf</span></code>: Tensorflow is a machine learning framework for building and training deep learning neural network models. This library is the basis of building the U-Net model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">keras</span> <span class="pre">import</span> <span class="pre">Input</span></code>: Keras is a high-level neural networks API that runs on top of tensorflow. Input is a tensor-like object that defines the attributes of the input data, such as shape and datatype. We also use it to create models with a defined output using <code class="docutils literal notranslate"><span class="pre">tf.keras.Model()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">keras.layers</span> <span class="pre">as</span> <span class="pre">layers</span></code>: The layers module provides various neural network layers, which are used for building the U-Net model.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">keras.callbacks</span> <span class="pre">import</span> <span class="pre">EarlyStopping</span></code>: Earlystopping is a regularization technique that monitors the model’s performance during training and stops the training process when the model stops improving. We use earlystopping to improve efficiency and prevent overfitting.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cartopy.crs</span> <span class="pre">as</span> <span class="pre">ccrs</span></code>: This module provides classes and functions to define and manipulate different coordinate reference systems (CRS). We use ccrs to define map projections (PlateCarree, or the equirectangular projection or geographic projection) and transfer the coordinates when plotting results.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">cartopy.feature</span> <span class="pre">as</span> <span class="pre">cfeature</span></code>: This module provides access to various geographical features like coastlines, borders, rivers, and landforms. These features can be added to maps to provide context or enhance the visualization. We use cfeature specifically for plotting coastlines during evaluation.</p></li>
+</ul>
+</section>
+</section>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
-</div>
-
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -351,12 +445,45 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="unet.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">What is U-Net?</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1-U-Net_Data_Prep.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Prep the data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#library-imports">Library imports</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
