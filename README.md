@@ -63,14 +63,21 @@ flowchart TD
     A[Zarr data] --> B[Data Preprocessing]
     B --> C[Model Fit]
     C --> D[Result Visualization]
-    B --> E{Create - zarr.data_preprocessing}
 ```
 
 ## Results/Findings
+[oceanhackweek.org/ohw25_proj_gap/](oceanhackweek.org/ohw25_proj_gap/)
 
 ## Lessons Learned
+* Working with outdated packages can be quite challenging.
+* Existing frameworks (e.g., DINCAE) can serve as inspiration but need to be adapted to the specific context.
+* Pay attention to memory efficiency — document how much memory is required to run your code and data.
+* Collaboration and thorough documentation help improve workflow efficiency.
+* Avoid using `to_numpy()` on the full dataset (time, lat, lon, var). Instead, stream patches directly from the Zarr files in batches or use [dask](https://www.dask.org/).
+* Xarray is powerful, with advanced options available in [icechunk](https://github.com/earth-mover/icechunk) and [cubed](https://github.com/cubed-dev/cubed).
 
 ## References
+* [PFT_gapfilling](https://github.com/EhsanMehdipour/PFT_gapfilling)
 
 ## Creating the JupyterBook
 
