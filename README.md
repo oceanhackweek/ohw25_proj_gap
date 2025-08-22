@@ -60,3 +60,14 @@ dataset
 
 ## References
 
+## Creating the JupyterBook
+
+Create template in `book` directory
+```
+pip install -U jupyter-book
+jupyter-book create book
+```
+Build and push to GitHub
+jupyter-book build .
+```
+
