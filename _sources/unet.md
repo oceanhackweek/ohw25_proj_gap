@@ -14,3 +14,9 @@ The model uses three encoder layers of filter sizes 64, 128, 256, and three deco
 - `BatchNormalization`: normalizes the input. It reduces overfitting and improves the generalizability of a model.
 - `Conv2DTranspose`: performs a "reverse" convolution and upsamples the input. The output dimension doubles the input.
 - `Concatenate`: merges the upsampled feature maps with the feature maps from the corresponding encoder. It retains the higher-resolution features that were lost during downsampling.
+
+## References
+```{bibliography}
+:filter: docname in docnames
+```
+

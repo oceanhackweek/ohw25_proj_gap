@@ -1,11 +1,9 @@
-# Welcome to your Jupyter Book
+# gap-filling gridded data
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+This project worked on getting 2 different approaches to gap-filling of gridded data working: UNet gap-filling model {cite:p}`hong_global_2023` developed by Yifei Hang during summer 2024 and DINCAE (Data-Interpolating Convolutional Auto-Encoder) {cite:p}`Barthetal2020, Barthetal2022`.
 
-Check out the content pages bundled with this sample book to see more.
+We learned a lot of lessons about reproducing (or not reproducing) CNN projects.
 
+Table of Contents
 ```{tableofcontents}
 ```
