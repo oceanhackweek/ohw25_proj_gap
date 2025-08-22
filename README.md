@@ -58,6 +58,13 @@ dataset
 ```
 
 ## Workflow/Roadmap
+```mermaid
+flowchart TD
+    A[Zarr data] --> B[Data Preprocessing]
+    B --> C[Model Fit]
+    C --> D[Result Visualization]
+    B --> E{Create - zarr.data_preprocessing}
+```
 
 ## Results/Findings
 
